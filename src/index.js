@@ -1,4 +1,19 @@
 module.exports = function toReadable(number) {
+    const arr1 = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+    const arr2 = ['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+    if(number < 20){
+        let word = arr1[number];
+        return word;
+    }
+    if(number >= 20 && number < 100){
+let str = number + '';
+let first = str[0];
+let second = str[1];
+let word1 = arr2[first];
+let word2 = arr1[second];
+return word1 + ' ' + word2;
+    }
+    /*
     switch (number) {
         case 0:
             return 'zero';
@@ -129,4 +144,5 @@ module.exports = function toReadable(number) {
             return 'nine hundred ninety nine';
             break;
     }
+    */
 }
